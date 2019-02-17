@@ -8,11 +8,11 @@ using System.Windows;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("PC School Admin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Программа для администрирования компьютеров в кабинетах информатики")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Uk. Soft-Evolution")]
 [assembly: AssemblyProduct("PC School Admin")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © Uk. Soft-Evolution 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
