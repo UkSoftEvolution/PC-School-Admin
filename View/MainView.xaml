@@ -3,9 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="clr-namespace:PC_School_Admin.ViewModel"
         mc:Ignorable="d"
-        Title="PC School Admin" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="PC School Admin" Height="450" Width="800" MinHeight="450" MinWidth="800" Background="{StaticResource Color.Background}" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-
+        <Frame
+            NavigationUIVisibility="Hidden"
+            Content="{Binding Active}"/>
     </Grid>
 </Window>
