@@ -3,4 +3,15 @@
     <!--Цвета блоков-->
     <SolidColorBrush x:Key="Color.Background" Color="#FF18191D"/>
     <SolidColorBrush x:Key="Color.Secondary" Color="#FF282E33"/>
+
+    <SolidColorBrush x:Key="Color.Foreground.Normal" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="Color.Foreground.H1" Color="#FF009687"/>
+    <SolidColorBrush x:Key="Color.Foreground.Caption" Color="#FF808080"/>
+
+    <SolidColorBrush x:Key="Color.BorderBrush.Normal" Color="#FF808080"/>
+    <SolidColorBrush x:Key="Color.BorderBrush.KeyboardFocused" Color="#FF009687"/>
+
+    <SolidColorBrush x:Key="Color.Button.Background.Normal" Color="#FF009687"/>
+    <SolidColorBrush x:Key="Color.Button.Background.MouseOver" Color="#FF32A898"/>
+    <SolidColorBrush x:Key="Color.Button.Background.Pressed" Color="#FF42B8A8"/>
 </ResourceDictionary>

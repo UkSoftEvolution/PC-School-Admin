@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="H1" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource Color.Foreground.H1}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Font.Bold}"/>
+        <Setter Property="FontSize" Value="{StaticResource Font.H1}"/>
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="TextTrimming" Value="None"/>
+    </Style>
+</ResourceDictionary>

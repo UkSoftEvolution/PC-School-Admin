@@ -1,10 +1,7 @@
 ﻿<Page x:Class="PC_School_Admin.View.RegView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" Height="450" Width="800">
+      Style="{DynamicResource Page}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,11 +12,10 @@
 
         <Grid Grid.Row="0">
             <TextBlock
+                Style="{DynamicResource H1}"
                 Text="Регистрация"
-                FontSize="70"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Foreground="#FF009687"/>
+                VerticalAlignment="Center"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -29,43 +25,36 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
             <Grid Grid.Column="1">
                 <StackPanel VerticalAlignment="Center">
+                    <TextBlock
+                        Style="{DynamicResource Caption}"
+                        Text="Имя компьютера"
+                        Margin="3"/>
                     <TextBox
-                        Background="{x:Null}"
-                        BorderBrush="#FF808080"
-                        Foreground="#FFFFFFFF"
-                        BorderThickness="0 0 0 2"
-                        FontSize="15"
-                        Margin="6"
-                        Text="Имя компьютера"/>
-                    <TextBox
-                        Background="{x:Null}"
-                        BorderBrush="#FF808080"
-                        Foreground="#FFFFFFFF"
-                        BorderThickness="0 0 0 2"
-                        FontSize="15"
-                        Margin="6"
-                        Text="Пароль"/>
+                        Style="{DynamicResource Text}"
+                        Text="ПК1"
+                        Margin="3"/>
+                    <TextBlock
+                        Style="{DynamicResource Caption}"
+                        Text="Код доступа"
+                        Margin="3"/>
+                    <PasswordBox
+                        Style="{DynamicResource Password}"
+                        Password="02051995"
+                        Margin="3"/>
                     <Button
-                        Background="#FF009687"
-                        BorderBrush="{x:Null}"
-                        Foreground="#FFFFFFFF"
+                        Style="{DynamicResource Button}"
                         Content="ПРОДОЛЖИТЬ"
-                        FontSize="20"
-                        Height="50"
-                        BorderThickness="0 0 0 0"
-                        Margin="6" FontFamily="Segoe UI Semibold"/>
+                        Margin="3"/>
                 </StackPanel>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="2">
             <TextBlock
+                Style="{DynamicResource Caption}"
                 Text="© Uk. Soft-Evolution"
-                FontSize="15"
-                Foreground="#FF808080"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"/>
         </Grid>

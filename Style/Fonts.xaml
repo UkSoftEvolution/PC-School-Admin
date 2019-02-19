@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <FontFamily x:Key="Font.Light">Segoe UI Light</FontFamily>
+    <FontFamily x:Key="Font.Normal">#Segoe UI</FontFamily>
+    <FontFamily x:Key="Font.Bold">#Segoe UI Semibold</FontFamily>
+
+    <system:Double x:Key="Font.H1">70</system:Double>
+    <system:Double x:Key="Font.Standart">15</system:Double>
+    <system:Double x:Key="Font.Button">20</system:Double>
+</ResourceDictionary>
