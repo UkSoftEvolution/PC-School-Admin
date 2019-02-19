@@ -1,4 +1,5 @@
 ﻿using PC_School_Admin.Other;
+using PC_School_Admin.View;
 using System.Windows.Controls;
 
 namespace PC_School_Admin.ViewModel
@@ -11,6 +12,14 @@ namespace PC_School_Admin.ViewModel
         #region Fields
         Page active; //Активная страница
         #endregion
+
+        /// <summary>
+        /// Конструктор главной модели представлений
+        /// </summary>
+        public MainViewModel()
+        {
+            Active = new RegView();
+        }
 
         #region Methods
         /// <summary>
