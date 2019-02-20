@@ -8,7 +8,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="95"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
@@ -24,25 +24,33 @@
         <Grid Grid.Row="1">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
                 <TextBlock
-                        Style="{DynamicResource Caption}"
-                        Text="Имя компьютера"
-                        Margin="3"/>
+                    Style="{DynamicResource Caption}"
+                    Text="Имя компьютера"
+                    Margin="3"/>
                 <TextBox
-                        Style="{DynamicResource Text}"
-                        Text="ПК1"
-                        Margin="3"/>
+                    Style="{DynamicResource Text}"
+                    Text="ПК1"
+                    Margin="3"
+                    MaxLength="20"/>
                 <TextBlock
-                        Style="{DynamicResource Caption}"
-                        Text="Код доступа"
-                        Margin="3"/>
+                    Style="{DynamicResource Caption}"
+                    Text="Код доступа"
+                    Margin="3"/>
                 <PasswordBox
-                        Style="{DynamicResource Password}"
-                        Password="02051995"
-                        Margin="3"/>
+                    Style="{DynamicResource Password}"
+                    Password="02051995"
+                    Margin="3"
+                    MaxLength="20"/>
+                <TextBlock
+                    Style="{DynamicResource Caption Error}"
+                    Text="Код доступа введен неправильно"
+                    HorizontalAlignment="Center"
+                    Visibility="Visible"
+                    Margin="3"/>
                 <Button
-                        Style="{DynamicResource Button}"
-                        Content="ПРОДОЛЖИТЬ"
-                        Margin="3"/>
+                    Style="{DynamicResource Button}"
+                    Content="ПРОДОЛЖИТЬ"
+                    Margin="3"/>
             </StackPanel>
         </Grid>
 

@@ -7,6 +7,7 @@
     <SolidColorBrush x:Key="Color.Foreground.Normal" Color="#FFFFFFFF"/>
     <SolidColorBrush x:Key="Color.Foreground.H1" Color="#FF009687"/>
     <SolidColorBrush x:Key="Color.Foreground.Caption" Color="#FF808080"/>
+    <SolidColorBrush x:Key="Color.Foreground.Error" Color="#FFBD3E38"/>
 
     <SolidColorBrush x:Key="Color.BorderBrush.Normal" Color="#FF808080"/>
     <SolidColorBrush x:Key="Color.BorderBrush.KeyboardFocused" Color="#FF009687"/>

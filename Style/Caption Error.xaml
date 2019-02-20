@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="Caption Error" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource Color.Foreground.Error}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Font.Normal}"/>
+        <Setter Property="FontSize" Value="{StaticResource Font.Standart}"/>
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="TextTrimming" Value="None"/>
+    </Style>
+</ResourceDictionary>
