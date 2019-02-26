@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="95"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="23"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -57,6 +57,7 @@
         <Grid Grid.Row="2">
             <TextBlock
                 Style="{DynamicResource Caption}"
+                Margin="0 0 0 3"
                 Text="© Uk. Soft-Evolution"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"/>
