@@ -10,7 +10,7 @@ namespace PC_School_Admin.ViewModel
     public class MainViewModel : MVVM
     {
         #region Fields
-        Page active; //Активная страница
+        ActivePage active; //Активная страница
         #endregion
 
         /// <summary>
@@ -18,7 +18,9 @@ namespace PC_School_Admin.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            Active = new RegView();
+            active = new ActivePage();
+
+            Active = new RegView() { DataContext = new RegViewModel(active) };
         }
 
         #region Methods
@@ -27,14 +29,9 @@ namespace PC_School_Admin.ViewModel
         /// </summary>
         public Page Active
         {
-            get => active;
-            set
-            {
-                active = value;
-                OnPropertyChanged(nameof(active));
-            }
+            get => active.Active;
+            set => active.Active = value;
         }
-
         #endregion
     }
 }

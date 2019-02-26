@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Other\ActivePage.cs" />
+    <Compile Include="Other\Encryption.cs" />
+    <Compile Include="ViewModel\RegViewModel.cs" />
     <Compile Include="View\RegView.xaml.cs">
       <DependentUpon>RegView.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Interface\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

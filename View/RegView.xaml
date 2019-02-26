@@ -29,7 +29,7 @@
                     Margin="3"/>
                 <TextBox
                     Style="{DynamicResource Text}"
-                    Text="ПК1"
+                    Text="{Binding Name}"
                     Margin="3"
                     MaxLength="20"/>
                 <TextBlock
@@ -38,7 +38,7 @@
                     Margin="3"/>
                 <PasswordBox
                     Style="{DynamicResource Password}"
-                    Password="02051995"
+                    x:Name="password"
                     Margin="3"
                     MaxLength="20"/>
                 <TextBlock
@@ -49,6 +49,8 @@
                     Margin="3"/>
                 <Button
                     Style="{DynamicResource Button}"
+                    Command="{Binding ContinueClick}"
+                    CommandParameter="{Binding ElementName=password}"
                     Content="ПРОДОЛЖИТЬ"
                     Margin="3"/>
             </StackPanel>
