@@ -58,6 +58,11 @@
     </ApplicationDefinition>
     <Compile Include="Other\ActivePage.cs" />
     <Compile Include="Other\Encryption.cs" />
+    <Compile Include="Properties\Auth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Auth.settings</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\RegViewModel.cs" />
     <Compile Include="View\RegView.xaml.cs">
       <DependentUpon>RegView.xaml</DependentUpon>
@@ -102,11 +107,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Main.settings</DependentUpon>
-    </Compile>
     <Compile Include="Other\MVVM.cs" />
     <Compile Include="Other\RelayCommand.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -137,9 +137,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Main.settings">
+    <None Include="Properties\Auth.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Main.Designer.cs</LastGenOutput>
+      <LastGenOutput>Auth.Designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

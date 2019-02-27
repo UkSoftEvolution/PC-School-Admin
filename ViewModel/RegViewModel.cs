@@ -64,8 +64,12 @@ namespace PC_School_Admin.ViewModel
                     }
                     else
                     {
+                        Properties.Auth.Default.Name = Name;
                         Encryption encryption = new Encryption();
-                        encryption.Encrypt(obj);
+                        Properties.Auth.Default.Password = encryption.Encrypt(obj);
+                        Properties.Auth.Default.Save();
+                        Properties.Settings.Default.First_Start = false;
+                        Properties.Settings.Default.Save();
                     }
                 }
             }

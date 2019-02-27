@@ -13,11 +13,11 @@ namespace PC_School_Admin.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Auth : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static Auth defaultInstance = ((Auth)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Auth())));
         
-        public static Settings Default {
+        public static Auth Default {
             get {
                 return defaultInstance;
             }
@@ -25,13 +25,25 @@ namespace PC_School_Admin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool First_Start {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Name {
             get {
-                return ((bool)(this["First_Start"]));
+                return ((string)(this["Name"]));
             }
             set {
-                this["First_Start"] = value;
+                this["Name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Password {
+            get {
+                return ((string)(this["Password"]));
+            }
+            set {
+                this["Password"] = value;
             }
         }
     }

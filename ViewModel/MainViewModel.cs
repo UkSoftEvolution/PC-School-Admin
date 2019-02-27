@@ -19,8 +19,8 @@ namespace PC_School_Admin.ViewModel
         public MainViewModel()
         {
             active = new ActivePage();
-
-            Active = new RegView() { DataContext = new RegViewModel(active) };
+            if (Properties.Settings.Default.First_Start)
+                Active = new RegView() { DataContext = new RegViewModel(active) };
         }
 
         #region Methods
