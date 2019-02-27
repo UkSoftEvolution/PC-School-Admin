@@ -30,6 +30,7 @@
                 <TextBox
                     Style="{DynamicResource Text}"
                     Text="{Binding Name}"
+                    IsEnabled="{Binding Enable}"
                     Margin="3"
                     MaxLength="20"/>
                 <TextBlock
@@ -38,19 +39,21 @@
                     Margin="3"/>
                 <PasswordBox
                     Style="{DynamicResource Password}"
+                    IsEnabled="{Binding Enable}"
                     x:Name="password"
                     Margin="3"
                     MaxLength="20"/>
                 <TextBlock
                     Style="{DynamicResource Caption Error}"
-                    Text="Код доступа введен неправильно"
+                    Text="{Binding MessageError}"
+                    Visibility="{Binding Visibile}"
                     HorizontalAlignment="Center"
-                    Visibility="Visible"
                     Margin="3"/>
                 <Button
                     Style="{DynamicResource Button}"
                     Command="{Binding ContinueClick}"
                     CommandParameter="{Binding ElementName=password}"
+                    IsEnabled="{Binding Enable}"
                     Content="ПРОДОЛЖИТЬ"
                     Margin="3"/>
             </StackPanel>

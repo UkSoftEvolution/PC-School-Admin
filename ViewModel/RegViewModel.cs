@@ -1,5 +1,6 @@
 ﻿using PC_School_Admin.Other;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PC_School_Admin.ViewModel
@@ -12,6 +13,9 @@ namespace PC_School_Admin.ViewModel
         #region Fields
         private ActivePage active; //Активная страница
         private string name; //Имя компьютера
+        private bool enable; //Доступность полей
+        private Visibility visibile; //Видимость ошибки
+        private string messageError; //Сообщение об ошибке
         #endregion
 
         #region Constructors
@@ -22,6 +26,8 @@ namespace PC_School_Admin.ViewModel
         public RegViewModel(ActivePage active)
         {
             this.active = active;
+            Enable = true;
+            Visibile = Visibility.Hidden;
         }
         #endregion
 
@@ -33,8 +39,37 @@ namespace PC_School_Admin.ViewModel
         /// <param name="obj">Объект</param>
         private void CheckIn(string name, object obj)
         {
-            Encryption encryption = new Encryption();
-            encryption.Encrypt(obj);
+            Enable = false;
+            if (Visibile == Visibility.Visible)
+                Visibile = Visibility.Hidden;
+
+            if (Name == null)
+            {
+                MessageError = "Имя введено неправильно";
+                Visibile = Visibility.Visible;
+            }
+            else
+            {
+                if (Name.Length == 0)
+                {
+                    MessageError = "Имя введено неправильно";
+                    Visibile = Visibility.Visible;
+                }
+                else
+                {
+                    if ((obj as PasswordBox).Password.Length == 0)
+                    {
+                        MessageError = "Код доступа введен неправильно";
+                        Visibile = Visibility.Visible;
+                    }
+                    else
+                    {
+                        Encryption encryption = new Encryption();
+                        encryption.Encrypt(obj);
+                    }
+                }
+            }
+            Enable = true;
         }
         #endregion
 
@@ -56,6 +91,42 @@ namespace PC_School_Admin.ViewModel
             {
                 name = value;
                 OnPropertyChanged(nameof(name));
+            }
+        }
+        /// <summary>
+        /// Доступность полей
+        /// </summary>
+        public bool Enable
+        {
+            get => enable;
+            set
+            {
+                enable = value;
+                OnPropertyChanged(nameof(enable));
+            }
+        }
+        /// <summary>
+        /// Видимость ошибки
+        /// </summary>
+        public Visibility Visibile
+        {
+            get => visibile;
+            set
+            {
+                visibile = value;
+                OnPropertyChanged(nameof(visibile));
+            }
+        }
+        /// <summary>
+        /// Сообщение об ошибке
+        /// </summary>
+        public string MessageError
+        {
+            get => messageError;
+            set
+            {
+                messageError = value;
+                OnPropertyChanged(nameof(messageError));
             }
         }
         #endregion
