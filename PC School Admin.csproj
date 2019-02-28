@@ -63,6 +63,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Auth.settings</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AuthViewModel.cs" />
     <Compile Include="ViewModel\RegViewModel.cs" />
     <Compile Include="View\AuthView.xaml.cs">
       <DependentUpon>AuthView.xaml</DependentUpon>
