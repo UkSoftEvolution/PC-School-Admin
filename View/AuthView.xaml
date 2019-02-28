@@ -7,6 +7,63 @@
       d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource Color.Foreground.Normal}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="23"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <TextBlock
+                Style="{DynamicResource H1}"
+                Text="Авторизация"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <TextBlock 
+                    Style="{DynamicResource Computer Name}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{Binding Name}"
+                    Margin="0 30"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+                    <TextBlock
+                        Style="{DynamicResource Caption}"
+                        Text="Код доступа"
+                        Margin="3"/>
+                    <PasswordBox
+                        Style="{DynamicResource Password}"
+                        IsEnabled="{Binding Enable}"
+                        x:Name="password"
+                        Margin="3"
+                        MaxLength="20"/>
+                    <TextBlock
+                        Style="{DynamicResource Caption Error}"
+                        Text="Код доступа введен неправильно"
+                        Visibility="{Binding Visibile}"
+                        HorizontalAlignment="Center"
+                        Margin="3"/>
+                    <Button
+                        Style="{DynamicResource Button}"
+                        Command="{Binding ConfirmClick}"
+                        CommandParameter="{Binding ElementName=password}"
+                        IsEnabled="{Binding Enable}"
+                        Content="ПОДТВЕРДИТЬ"
+                        Margin="3"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock
+                Style="{DynamicResource Caption}"
+                Margin="0 0 0 3"
+                Text="© Uk. Soft-Evolution"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"/>
+        </Grid>
     </Grid>
 </Page>

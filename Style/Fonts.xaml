@@ -6,6 +6,7 @@
     <FontFamily x:Key="Font.Bold">#Segoe UI Semibold</FontFamily>
 
     <system:Double x:Key="Font.H1">70</system:Double>
+    <system:Double x:Key="Font.H2">40</system:Double>
     <system:Double x:Key="Font.Standart">15</system:Double>
     <system:Double x:Key="Font.Button">20</system:Double>
 </ResourceDictionary>

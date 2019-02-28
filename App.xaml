@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="./Style/Password.xaml"/>
                 <ResourceDictionary Source="./Style/Button.xaml"/>
                 <ResourceDictionary Source="./Style/Caption Error.xaml"/>
+                <ResourceDictionary Source="./Style/Computer Name.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
