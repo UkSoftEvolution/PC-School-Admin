@@ -21,6 +21,8 @@ namespace PC_School_Admin.ViewModel
             active = new ActivePage();
             if (Properties.Settings.Default.First_Start)
                 Active = new RegView() { DataContext = new RegViewModel(active) };
+            else
+                Active = new AuthView();
         }
 
         #region Methods
