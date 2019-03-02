@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="Other\ActivePage.cs" />
     <Compile Include="Other\Encryption.cs" />
+    <Compile Include="Other\Notify.cs" />
     <Compile Include="Properties\Auth.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -164,6 +167,9 @@
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
