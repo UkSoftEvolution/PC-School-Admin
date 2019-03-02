@@ -11,6 +11,7 @@ namespace PC_School_Admin.ViewModel
     {
         #region Fields
         ActivePage active; //Активная страница
+        private Notify notify; //Трей
         #endregion
 
         /// <summary>
@@ -18,6 +19,7 @@ namespace PC_School_Admin.ViewModel
         /// </summary>
         public MainViewModel()
         {
+            notify = new Notify();
             active = new ActivePage();
             if (Properties.Settings.Default.First_Start)
                 Active = new RegView() { DataContext = new RegViewModel(active) };
