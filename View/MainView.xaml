@@ -5,7 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodel="clr-namespace:PC_School_Admin.ViewModel"
         mc:Ignorable="d"
-        Title="PC School Admin" Height="450" Width="800" MinHeight="450" MinWidth="800" Background="{StaticResource Color.Background}" WindowStartupLocation="CenterScreen">
+        Title="PC School Admin"
+        Background="{StaticResource Color.Background}"
+        ShowInTaskbar="True"
+        WindowState="{Binding StateWindow.WindowState}"
+        Visibility="{Binding StateWindow.Visibility}"
+        WindowStartupLocation="CenterScreen"
+        Height="450"
+        Width="800"
+        MinHeight="450"
+        MinWidth="800">
     <Window.DataContext>
         <viewmodel:MainViewModel/>
     </Window.DataContext>

@@ -61,6 +61,7 @@
     <Compile Include="Other\ActivePage.cs" />
     <Compile Include="Other\Encryption.cs" />
     <Compile Include="Other\Notify.cs" />
+    <Compile Include="Other\StateWindow.cs" />
     <Compile Include="Properties\Auth.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

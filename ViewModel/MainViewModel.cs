@@ -12,6 +12,7 @@ namespace PC_School_Admin.ViewModel
         #region Fields
         ActivePage active; //Активная страница
         private Notify notify; //Трей
+        private StateWindow stateWindow; //Состояние окна
         #endregion
 
         /// <summary>
@@ -19,12 +20,18 @@ namespace PC_School_Admin.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            notify = new Notify();
             active = new ActivePage();
             if (Properties.Settings.Default.First_Start)
+            {
                 Active = new RegView() { DataContext = new RegViewModel(active) };
+                stateWindow = new StateWindow(true);
+            }
             else
+            {
                 Active = new AuthView() { DataContext = new AuthViewModel() };
+                stateWindow = new StateWindow(false);
+            }
+            notify = new Notify(stateWindow);
         }
 
         #region Methods
@@ -36,6 +43,10 @@ namespace PC_School_Admin.ViewModel
             get => active.Active;
             set => active.Active = value;
         }
+        /// <summary>
+        /// Состояние окна
+        /// </summary>
+        public StateWindow StateWindow { get => stateWindow; }
         #endregion
     }
 }
